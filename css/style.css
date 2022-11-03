@@ -214,6 +214,19 @@ footer{
     align-items: center;
 }
 
+/* Navbar */
+
+#nav-toggler{
+    display: none;
+}
+
+.nav-toggler-icon{
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+
 /* Responsive */
 
 /* *********************** For Tablet Device ******************* */
@@ -251,5 +264,30 @@ footer{
     .banner-left{
         order: 2;
         padding: 50px 0;
+    }
+
+    .nav-toggler-icon{
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 20px 0;
+        transform: translateY(-330px);
+        transition: .7s ease-in-out;
+    }
+
+    .navigation li a {
+        color: #121212;
+    }
+
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
     }
 }
